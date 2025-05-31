@@ -8,7 +8,10 @@ import noteRoutes from './routes/noteRoutes';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://gorgeous-cajeta-48bab5.netlify.app",
+  credentials: true,
+}));
 app.use(express.json());
 
 
